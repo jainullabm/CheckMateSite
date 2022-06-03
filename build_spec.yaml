@@ -119,3 +119,17 @@ steps:
       docker build  --tag checkmatesite:latest --file Dockerfile . 
       echo images are
       docker images
+
+outputArtifacts:
+  - name: checkmatesite_container_image
+    type: DOCKER_IMAGE
+    location: checkmatesite:latest
+  - name: service_yaml
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/checkmate-service.yml
+  - name: ingressRules_yaml
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/checkmate-ingress.yaml
+  - name: deployment_yaml
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/checkmate-deployment.yml
