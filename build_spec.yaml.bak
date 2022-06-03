@@ -116,7 +116,7 @@ steps:
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}
       echo Running docker update - Working in `pwd`
-      docker build  --tag checkmatesite:latest --file Dockerfile . 
+      docker build  --tag checkmatesite:latest --file /workspace/CheckMateSite/dockerfile  
       echo images are
       docker images
 
