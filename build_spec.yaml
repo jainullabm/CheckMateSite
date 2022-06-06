@@ -9,8 +9,8 @@ env:
         JAVA_HOME: "javahome"
         
     vaultVariables:
-        OCIR_HOST_VAULT: "ocid1.vaultsecret.oc1.iad.amaaaaaart6i5vqah7suqsk7tf5uld5kmiknaaaaxji5eljxkx2og7t4kcuq"
-        OCIR_STORAGE_NAMESPACE_VAULT: "ocid1.vaultsecret.oc1.iad.amaaaaaart6i5vqam6pyc6kfocccjfch2ts4w7thho2q6u6s7mhbtdjfe2ja"
+        OCIR_HOST_VAULT_NEW: "ocid1.vaultsecret.oc1.iad.amaaaaaart6i5vqah7suqsk7tf5uld5kmiknaaaaxji5eljxkx2og7t4kcuq"
+        OCIR_NAMESPACE_VAULT_NEW: "ocid1.vaultsecret.oc1.iad.amaaaaaart6i5vqan7ccdk7xhlzypbuv6yb6x2cqmabzvtx7ib6u2hlhcjca"
         
     exportedVariables:
         - CHECKMATE_SITE_VERSION
@@ -27,8 +27,10 @@ steps:
         echo JAVA_HOME is  
         echo $JAVAHOME
         export CHECKMATE_SITE_VERSION=1.0.0
-        export OCIR_HOST=$OCIR_HOST_VAULT
-        export OCIR_STORAGE_NAMESPACE=$OCIR_STORAGE_NAMESPACE_VAULT
+        export OCIR_HOST=$OCIR_HOST_VAULT_NEW
+        export OCIR_STORAGE_NAMESPACE=$OCIR_NAMESPACE_VAULT_NEW
+        echo "OCIR_HOST" $OCIR_HOST
+        echo "OCIR_STORAGE_NAMESPACE" $OCIR_STORAGE_NAMESPACE
         echo Success
     onFailure:                      
       - type: Command
