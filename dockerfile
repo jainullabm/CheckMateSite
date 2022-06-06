@@ -1,4 +1,4 @@
-FROM mjdevops/checkmatesite:latest
+FROM jib-storefront:latest
 
 WORKDIR /app
 
