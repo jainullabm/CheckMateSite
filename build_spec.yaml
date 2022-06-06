@@ -124,6 +124,7 @@ steps:
       docker build  --tag checkmatesite:latest --file dockerfile  .  
       echo images are
       docker images
+      cd ${OCI_PRIMARY_SOURCE_DIR}
 
 outputArtifacts:
   - name: checkmatesite_container_image
