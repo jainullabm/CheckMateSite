@@ -1,7 +1,7 @@
 
 WORKDIR /app
 
-RUN cp -r /workspace/CheckMateSite/target/site.war .
+COPY /workspace/CheckMateSite/target/site.war .
 
 
 
