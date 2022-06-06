@@ -1,3 +1,4 @@
+FROM checkmatesite:latest
 
 WORKDIR /app
 
