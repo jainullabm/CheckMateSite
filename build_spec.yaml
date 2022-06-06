@@ -119,6 +119,7 @@ steps:
       cd ${OCI_PRIMARY_SOURCE_DIR}
       pwd
       ls -lrt
+      ls -lrt /workspace/CheckMateSite/target/
       echo Running docker update - Working in `pwd`
       docker build  --tag checkmatesite:latest --file dockerfile  .  
       echo images are
