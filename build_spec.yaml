@@ -117,8 +117,10 @@ steps:
     timeoutInSeconds: 60
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}
+      pwd
+      ls -lrt
       echo Running docker update - Working in `pwd`
-      docker build  --tag checkmatesite:latest --file dockerfile  /workspace/CheckMateSite/  
+      docker build  --tag checkmatesite:latest --file dockerfile  .  
       echo images are
       docker images
 
