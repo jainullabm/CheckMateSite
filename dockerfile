@@ -1,7 +1,7 @@
 
-FROM python:3.8-slim
+WORKDIR /app
 
-RUN cp -r /workspace/CheckMateSite/target/site.war /app
+RUN cp -r /workspace/CheckMateSite/target/site.war .
 
 
 
