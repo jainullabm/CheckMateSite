@@ -1,4 +1,4 @@
-FROM mjdevops:checkmatesite
+FROM mjdevops/checkmatesite:latest
 
 WORKDIR /app
 
